@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark University - Directories</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-image: url('https://clarkuedu-my.sharepoint.com/:i:/r/personal/nsinghvi_clarku_edu/Documents/Clark%20Accessibility/ClarkU.jpg?csf=1&web=1&e=DFYpja');
+        }
+
+        /* Parallax effect */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: inherit;
+            z-index: -1;
+            animation: parallax 10s infinite;
+        }
+
+        @keyframes parallax {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100px); /* Adjust this value for the desired parallax effect */
+            }
+        }
+
+        header {
+            background-color: #c0000d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background-color: #c0000d;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #e0e0e0;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            color: #c0000d;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #c0000d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #quick-links {
+            background-color: #c0000d;
+            color: white;
+            border-radius: 5px;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        #quick-links h2 {
+            color: white;
+        }
+
+        #quick-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #quick-links li {
+            margin: 10px 0;
+        }
+
+        #quick-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            transition: all 0.3s ease;
+            transform: translateX(0);
+        }
+
+        #quick-links a:hover {
+            text-decoration: underline;
+            transform: translateX(-10px);
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .login-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #f9f9f9;
+        }
+        
+        .logo-image {
+            width: 100px;
+        }
+
+        /* Add CSS for the button */
+        #color-change-button {
+            background-color: #c0000d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Add style for Student Resources section */
+        #student-resources {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #e0e0e0;
+        }
+        #student-resources h2 {
+            color: #c0000d;
+        }
+        #student-resources p {
+            font-size: 16px;
+        }
+        #student-resources ul {
+            list-style: none;
+            padding: 0;
+        }
+        #student-resources li {
+            margin: 10px 0;
+        }
+        #student-resources a {
+            color: #c0000d;
+            text-decoration: none;
+        }
+        #student-resources a:hover {
+            text-decoration: underline;
+        }
+
+        /* Quick Links Section */
+#quick-links {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #e0e0e0;
+}
+
+#quick-links h2 {
+    color: #c0000d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.quick-links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links-list li {
+    margin-bottom: 10px;
+}
+
+.quick-link-item {
+    background-color: #c0000d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.quick-link-item:hover {
+    background-color: #c0004d; /* Change the background color on hover */
+}
+
+.quick-link-text {
+    font-size: 18px;
+}
+
+.quick-link-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.quick-link-item a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Logo Container -->
+    <div class="logo-container">
+        <img class="logo-image" src="https://clarkuedu-my.sharepoint.com/:i:/r/personal/nsinghvi_clarku_edu/Documents/Clark%20Accessibility/Clark_University_seal.svg.png?csf=1&web=1&e=AEkfej" alt="Clark University Logo">
+    </div>
+
+    <header>
+        <h1>Student Directories</h1>
+        <h4>Welcome to the Clark University Student Directories page</h4>
+    </header>
+    <div class="login-container">
+        <p><a href="https://adfs.clarku.edu/adfs/ls/?wa=wsignin1.0&wtrealm=urn:federation:cas&wctx=ADFS" target="_blank" style="color:#ffffff;">ClarkYou login</a></p>
+    </div>
+
+    <!-- <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav> -->
+    <div style="padding-top: 3%; padding-bottom: 5%;">
+    <main style="text-align: center; ">
+        <section id="about" style="display: inline-block; text-align: left; ">
+            <h1 style="color: black; font-size: 40px; text-align: center;">The Clark University Student Directory and Beyond</h1>
+            <h4 style="text-align: justify;">Welcome to Clark University, where a profound sense of purpose greets you the instant you set foot on our picturesque Worcester campus. Here, an extraordinary community converges, uniting creative, fervent, and profoundly intellectually engaged students from every corner of the globe. We are more than dreamers; We are doers. Together, we share an unwavering commitment to not just imagining a brighter world, but crafting it into existence — and they utilize the potent resource of our student directory to transform our dreams into impactful reality</h4>
+        </section>
+
+        <section id="quick-links">
+            <h2>Quick Links</h2>
+            <ul class="quick-links-list">
+                <li>
+                    <a href="https://apps.clarku.edu/classrooms/buildings" target="_blank">
+                        <div class="quick-link-item">
+                            <span class="quick-link-text">Buildings & Facilities</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="C:\Users\jaiki\Downloads\Clark Accessibility\Offices.html" target="_blank">
+                        <div class="quick-link-item">
+                            <span class="quick-link-text">Offices</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="C:/Users/jaiki/Downloads/Clark%20Accessibility/Events_Page.html" target="_blank">
+                        <div class="quick-link-item">
+                            <span class="quick-link-text">Events and Locations</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://clarku.campuslabs.com/engage/" target="_blank">
+                        <div class="quick-link-item">
+                            <span class="quick-link-text">Clubs and Organization</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <div class="quick-link-item">
+                            <span class="quick-link-text">Centers & Institutes</span>
+                        </div>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="https://www.clarku.edu/academics/schools-and-departments/">
+                        <div class="quick-link-item">
+                            <span class="quick-link-text">Departments & Programs</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+ 
+        <!-- Student Resources Section -->
+        <section id="student-resources" style="text-align: left;">
+            <h2>Student Resources</h2>
+            <p>Find important resources for students here, including links to academic support, student services, and more.</p>
+            <ul>
+                <li><a href="https://www.clarku.edu/library/" target="_blank">Library</a></li>
+                <li><a href="https://www.clarku.edu/offices/academic-advising-center/" target="_blank">Academic Advising</a></li>
+                <li><a href="https://www.clarku.edu/offices/career-connections-center/" target="_blank">Career Connection</a></li>
+                <li><a href="https://support.microsoft.com/en-us/training" target="_blank">Microsoft Office 365 Suite</a></li>
+                <!-- Add more student resource links -->
+            </ul>
+        </section>
+    </main>
+</div>
+    <footer style="position: fixed; left: 0; bottom: 0; width: 100%;">
+        <p>&copy; 2023 Clark University</p>
+    </footer>
+
+    
+</body>
+</html>
